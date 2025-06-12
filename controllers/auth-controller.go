@@ -21,7 +21,7 @@ func Login() gin.HandlerFunc {
 			return
 		}
 
-		if creds.Email != "g@gmail.com" || creds.Password != "password123" {
+		if creds.Email != "g@gmail.com" || creds.Password != "password123" {  //----setep for backend check api hit
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid credentials"})
 			return
 		}
@@ -42,3 +42,9 @@ func Login() gin.HandlerFunc {
 		c.JSON(http.StatusOK, gin.H{"token": tokenString})
 	}
 }
+
+//first take credentials like loging or pas for generate token
+//generate claims using     jwt.MapClaims
+//create a new token with   jwt.NewWithClaims
+//sign the token with a secret key and return it in the response token.SignedString
+// Note: In a real application, you would validate the user's credentials against a database
