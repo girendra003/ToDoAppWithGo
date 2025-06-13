@@ -3,6 +3,7 @@ package main
 import (
 
 	"github.com/girendra003/gin-mongodb-api/config"
+	"github.com/girendra003/gin-mongodb-api/cronjobs"
 	"github.com/girendra003/gin-mongodb-api/routes"
 
 	"github.com/gin-gonic/gin"
@@ -13,6 +14,8 @@ func main() {
 
 	//run database
 	config.DBInstance()
+
+	cronjobs.Ok()
 
 	//routes
 	routes.UserRoute(router)

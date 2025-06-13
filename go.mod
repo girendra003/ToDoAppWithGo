@@ -9,6 +9,8 @@ require (
 	go.mongodb.org/mongo-driver v1.17.4
 )
 
+require github.com/robfig/cron/v3 v3.0.1 
+
 require (
 	github.com/bytedance/sonic v1.11.6 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
