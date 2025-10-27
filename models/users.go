@@ -16,4 +16,4 @@ type UserResponse struct {
 	Name      string             `json:"name,omitempty"`
 	Email     string             `json:"email,omitempty"`
 	CreatedAt int64              `json:"created_at,omitempty"`
-}
+} 
